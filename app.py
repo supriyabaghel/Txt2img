@@ -9,7 +9,7 @@ import time
 import json
 import sys
 
-# Set up logging to both file and console
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -59,13 +59,13 @@ def generate_image(prompt):
             }
         }
         
-        # Log the request details
+        
         logger.info(f"Sending request to API with payload: {json.dumps(payload)}")
         
         # Call Hugging Face API with a timeout
         response = requests.post(API_URL, headers=headers, json=payload, timeout=60)
         
-        # Log the response status and headers
+
         logger.info(f"Response status code: {response.status_code}")
         logger.info(f"Response headers: {dict(response.headers)}")
         
