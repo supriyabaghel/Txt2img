@@ -1,0 +1,4 @@
+flask
+deep-translator
+requests
+pillow

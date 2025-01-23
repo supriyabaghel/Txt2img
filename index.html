@@ -1,0 +1,55 @@
+                                                           mkdir -p static/images
+
+
+    Directory: C:\Users\supri\CascadeProjects\text-to-image-generator\static
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        23-01-2025     16:20                images
+
+
+PS C:\Users\supri\CascadeProjects\text-to-image-generator>http://localhost:5000<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Image Generator</h1>
+        <div class="input-section">
+            <textarea id="promptInput" placeholder="Enter your prompt here..."></textarea>
+            <div class="controls">
+                <button id="generateBtn">Generate Image</button>
+                <div class="settings">
+                    <select id="imageSize">
+                        <option value="256x256">256x256</option>
+                        <option value="512x512" selected>512x512</option>
+                        <option value="1024x1024">1024x1024</option>
+                    </select>
+                    <select id="imageStyle">
+                        <option value="realistic">Realistic</option>
+                        <option value="artistic">Artistic</option>
+                        <option value="cartoon">Cartoon</option>
+                        <option value="anime">Anime</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="output-section">
+            <div id="loadingSpinner" class="hidden">
+                <div class="spinner"></div>
+                <p>Generating your image...</p>
+            </div>
+            <div id="imageOutput" class="hidden">
+                <img id="generatedImage" src="" alt="Generated image">
+                <button id="downloadBtn">Download Image</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
